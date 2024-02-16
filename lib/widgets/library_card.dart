@@ -26,9 +26,9 @@ class LibraryCard extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10.0),
-          const SizedBox(
-            width: 240,
-            child: Column(
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.50,
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(

@@ -5,19 +5,19 @@ class CustomChip extends StatelessWidget {
     Key? key,
     required this.label,
     required this.iconData,
-    this.width = 110.0,
+    this.width,
   }) : super(key: key);
 
   final String label;
   final IconData iconData;
-  final double width;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
+      width: width ?? MediaQuery.of(context).size.width * 0.22,
       margin: const EdgeInsets.only(bottom: 5.0),
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 3.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
